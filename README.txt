@@ -1,13 +1,17 @@
-OBOK GLOBAL WEBSITE V4
+O'BOK Foods two-video homepage section
 
-Languages:
-- /en/ English
-- /cn/ Simplified Chinese
-- /ru/ Russian
+Files:
+- index.html
+- styles.css
+- assets/fermentation-philosophy.mp4
+- assets/obok-brand-film.mp4
+- assets/philosophy-poster.jpg
+- assets/brand-film-poster.jpg
+- assets/obok-logo.png
 
-The root index.html detects the browser language. The user can change language from the top-right menu, and the selected language is stored in the browser.
-
-GitHub Pages upload:
-Upload index.html, the assets folder, and the en/cn/ru folders to the repository root.
-Pages settings: main branch / (root).
-Expected URL: https://obokfood1.github.io/obok-china/
+Usage:
+1. Upload the entire folder while preserving the structure.
+2. Open index.html to preview.
+3. Replace the HACCP placeholder in index.html with the actual certificate image.
+4. The upper philosophy video autoplays muted and loops.
+5. The lower brand film is user-controlled.
