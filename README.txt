@@ -1,19 +1,9 @@
-OBOK FOODS — FINAL LOCALIZED HERO PACKAGE
+OBOK mobile Hero gap fix
 
-Replace in GitHub:
+Replace these files in GitHub:
 - en/index.html
 - cn/index.html
 - ru/index.html
-- assets/obok-hero-en.png
-- assets/obok-hero-cn.png
-- assets/obok-hero-ru.png
 
-Included:
-- English, Chinese and Russian localized Hero text and buttons
-- Working Hero button click areas
-- Smooth scrolling for menus and buttons
-- Equal-sized white gift-set backgrounds
-- Active navigation state
-- Mobile scrolling behavior
-- SEO titles and descriptions
-- Language switching that preserves the current section
+This removes the large white gap between the Hero image and the statistics section on mobile.
+Hero images and other assets are unchanged.
