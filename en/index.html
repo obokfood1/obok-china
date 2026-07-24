@@ -146,6 +146,38 @@ section[id]{scroll-margin-top:88px}
   .hero-products-link{left:45.8%;top:80%;width:16.8%;height:8%}
 }
 </style>
+
+<style id="obok-mobile-hero-gap-fix">
+@media (max-width: 768px){
+  .hero{
+    height:auto !important;
+    min-height:0 !important;
+    padding:0 !important;
+    display:block !important;
+  }
+
+  .hero > .container{
+    height:auto !important;
+    min-height:0 !important;
+    margin:0 !important;
+    padding:0 !important;
+  }
+
+  .obok-main-hero-image{
+    display:block !important;
+    width:100% !important;
+    height:auto !important;
+    margin:0 !important;
+  }
+
+  .hero .stats{
+    position:static !important;
+    inset:auto !important;
+    transform:none !important;
+    margin:0 !important;
+  }
+}
+</style>
 </head><body>
 <header class="header"><a class="brand" href="#top"><img alt="OBOK logo" class="logo-mark" decoding="async" loading="lazy" src="../assets/obok-logo.png"/><span><b>OBOK FOODS</b><small>SINCE 1952</small></span></a><button aria-label="Menu" class="menu">☰</button><nav class="nav"><a href="#about">About</a><a href="#products">Products</a><a href="#bulk">Bulk &amp; OEM</a><a href="#gifts">Gift Sets</a><a href="#quality">Factory</a><a href="#contact">Contact</a><div class="lang-wrap"><button class="lang">🌐 English ▾</button><div class="lang-menu"><a data-language="en" href="../en/">English</a><a data-language="cn" href="../cn/">简体中文</a><a data-language="ru" href="../ru/">Русский</a></div></div></nav></header>
 <main id="top"><section class="hero"><div class="container"><img alt="OBOK Foods — over 70 years of Korean fermentation" class="obok-main-hero-image" src="../assets/obok-hero-en.png"/><div class="hero-cta-overlay"><a aria-label="Contact Us" class="hero-contact-link" href="#contact" title="Contact Us"></a><a aria-label="Explore Products" class="hero-products-link" href="#products" title="Explore Products"></a></div></div><div class="stats"><div class="stat"><b>1952</b><span>Established</span></div><div class="stat"><b>70+</b><span>Years of experience</span></div><div class="stat"><b>HACCP</b><span>Quality management</span></div><div class="stat"><b>OEM</b><span>Custom manufacturing</span></div></div></section>
@@ -245,7 +277,6 @@ document.addEventListener('DOMContentLoaded',function(){
   }
 });
 </script>
-
 <script id="obok-language-hash">
 document.addEventListener('DOMContentLoaded',function(){
   document.querySelectorAll('.lang-menu a').forEach(function(link){
