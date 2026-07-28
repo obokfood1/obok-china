@@ -1,19 +1,11 @@
-OBOK video sound fix
+OBOK FOOD Final Hero Images
 
-Upload and overwrite:
-- en/index.html
-- cn/index.html
-- ru/index.html
-- es/index.html
-- assets/fermentation-philosophy.mp4
-- assets/philosophy-poster.jpg
+Included:
+- English: obok-hero-en.png / .webp
+- Chinese: obok-hero-cn.png / .webp
+- Russian: obok-hero-ru.png / .webp
+- Spanish: obok-hero-es.png / .webp
 
-Why the video was silent:
-1. The previous optimized MP4 was exported without an audio track.
-2. Browsers block autoplay with sound, especially Safari and mobile browsers.
-
-This version:
-- Preserves the original AAC audio.
-- Starts muted so autoplay still works.
-- Adds a visible sound button and native video controls.
-- Sound begins after the visitor taps/clicks the button, which complies with browser autoplay rules.
+Upload path: assets/
+Overwrite existing files with the same names.
+PNG is safest for compatibility; WebP is included for faster loading.
