@@ -1,13 +1,9 @@
-OBOK Hero ghost-text correction
+OBOK philosophy video replacement
 
 Upload these files to the GitHub assets folder and overwrite the existing files:
-- assets/obok-hero-cn.png
-- assets/obok-hero-ru.png
-- assets/obok-hero-es.png
+- assets/fermentation-philosophy.mp4
+- assets/philosophy-poster.jpg
 
-The English hero is included for reference and does not need to be replaced:
-- assets/obok-hero-en.png
-
-No HTML or CSS changes are required.
-The original English text has been fully covered, so no ghost text remains.
-The existing transparent Contact and Products click areas remain aligned.
+No HTML changes are required.
+This replaces the autoplay philosophy video on English, Chinese, Russian, and Spanish pages.
+The video was optimized as H.264/yuv420p with fast-start for Chrome, Edge, Safari, and mobile browsers.
