@@ -1,9 +1,21 @@
-OBOK mobile Hero gap fix
+OBOK FOODS — Spanish Language Addition
 
-Replace these files in GitHub:
+Upload/overwrite the following in GitHub:
 - en/index.html
 - cn/index.html
 - ru/index.html
+- es/index.html
+- assets/obok-hero-es.png
+- sitemap.xml
+- robots.txt
 
-This removes the large white gap between the Hero image and the statistics section on mobile.
-Hero images and other assets are unchanged.
+Also keep all existing files in assets.
+
+Included:
+- Complete Spanish page based on the English layout
+- Spanish Hero image
+- Español added to all language menus
+- hreflang links for English, Chinese, Russian and Spanish
+- info@obok.co.kr standardized across all four pages
+- Mobile Hero gap fix preserved
+- Existing smooth-scroll and Hero button functions preserved
