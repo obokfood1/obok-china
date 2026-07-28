@@ -177,6 +177,29 @@ section[id]{scroll-margin-top:88px}
   }
 }
 </style>
+
+<style id="obok-video-sound-style">
+.obok-philosophy-video{position:relative}
+.obok-sound-toggle{
+  position:absolute;
+  right:14px;
+  bottom:14px;
+  z-index:5;
+  border:1px solid rgba(255,255,255,.75);
+  border-radius:999px;
+  padding:10px 15px;
+  background:rgba(25,20,18,.72);
+  color:#fff;
+  font:600 14px/1.1 Arial,sans-serif;
+  cursor:pointer;
+  backdrop-filter:blur(6px);
+  -webkit-backdrop-filter:blur(6px);
+}
+.obok-sound-toggle:focus-visible{outline:3px solid #fff;outline-offset:2px}
+@media(max-width:768px){
+  .obok-sound-toggle{right:10px;bottom:10px;padding:9px 12px;font-size:13px}
+}
+</style>
 </head><body>
 <header class="header"><a class="brand" href="#top"><img alt="OBOK logo" class="logo-mark" decoding="async" loading="lazy" src="../assets/obok-logo.png"/><span><b>OBOK FOODS</b><small>SINCE 1952</small></span></a><button aria-label="Menu" class="menu">☰</button><nav class="nav"><a href="#about">About</a><a href="#products">Products</a><a href="#bulk">Bulk &amp; OEM</a><a href="#gifts">Gift Sets</a><a href="#quality">Factory</a><a href="#contact">Contact</a><div class="lang-wrap"><button class="lang">🌐 English ▾</button><div class="lang-menu"><a data-language="en" href="../en/">English</a><a data-language="cn" href="../cn/">简体中文</a><a data-language="ru" href="../ru/">Русский</a><a data-language="es" href="../es/">Español</a></div></div></nav></header>
 <main id="top"><section class="hero"><div class="container"><img alt="OBOK Foods — over 70 years of Korean fermentation" class="obok-main-hero-image" src="../assets/obok-hero-en.png"/><div class="hero-cta-overlay"><a aria-label="Contact Us" class="hero-contact-link" href="#contact" title="Contact Us"></a><a aria-label="Explore Products" class="hero-products-link" href="#products" title="Explore Products"></a></div></div><div class="stats"><div class="stat"><b>1952</b><span>Established</span></div><div class="stat"><b>70+</b><span>Years of experience</span></div><div class="stat"><b>HACCP</b><span>Quality management</span></div><div class="stat"><b>OEM</b><span>Custom manufacturing</span></div></div></section>
@@ -190,11 +213,11 @@ section[id]{scroll-margin-top:88px}
 <section class="obok-philosophy-video-section" id="philosophy">
 <div class="container obok-video-grid">
 <div class="obok-video-card obok-philosophy-video reveal">
-<video aria-label="Traditional Korean fermentation atmosphere" autoplay="" loop="" muted="" playsinline="" poster="../assets/philosophy-poster.jpg" preload="metadata">
+<video aria-label="Traditional Korean fermentation atmosphere" autoplay="" controls="" loop="" muted="" playsinline="" poster="../assets/philosophy-poster.jpg" preload="metadata">
 <source src="../assets/fermentation-philosophy.mp4" type="video/mp4"/>
         Your browser does not support HTML5 video.
       </video>
-</div>
+<button aria-pressed="false" class="obok-sound-toggle" data-off-label="🔇 Mute" data-on-label="🔊 Turn sound on" type="button">🔊 Turn sound on</button></div>
 <div class="obok-video-copy reveal">
 <p class="kicker">OUR FERMENTATION PHILOSOPHY</p>
 <h2>Tradition made with a mother’s care</h2>
@@ -282,6 +305,37 @@ document.addEventListener('DOMContentLoaded',function(){
     link.addEventListener('click',function(e){
       const hash=window.location.hash||'';
       if(hash){e.preventDefault();window.location.href=this.getAttribute('href')+hash;}
+    });
+  });
+});
+</script>
+
+<script id="obok-video-sound-script">
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.obok-philosophy-video').forEach(function(card){
+    const video = card.querySelector('video');
+    const button = card.querySelector('.obok-sound-toggle');
+    if (!video || !button) return;
+
+    const onLabel = button.dataset.onLabel;
+    const offLabel = button.dataset.offLabel;
+
+    button.addEventListener('click', async function () {
+      video.muted = !video.muted;
+      if (!video.paused) {
+        button.textContent = video.muted ? onLabel : offLabel;
+        button.setAttribute('aria-pressed', String(!video.muted));
+        return;
+      }
+      try {
+        await video.play();
+        button.textContent = video.muted ? onLabel : offLabel;
+        button.setAttribute('aria-pressed', String(!video.muted));
+      } catch (e) {
+        video.muted = true;
+        button.textContent = onLabel;
+        button.setAttribute('aria-pressed', 'false');
+      }
     });
   });
 });
