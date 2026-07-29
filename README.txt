@@ -1,19 +1,8 @@
-OBOK FOOD homepage final application patch
+English hero correction
 
-Upload/overwrite these paths in GitHub:
-- en/index.html
-- cn/index.html
-- ru/index.html
-- es/index.html
-- assets/obok-hero-en.png
-- assets/obok-hero-cn.png
-- assets/obok-hero-ru.png
-- assets/obok-hero-es.png
+Upload only this file to the GitHub repository assets folder and overwrite the existing file:
+assets/obok-hero-en.png
 
-Applied:
-- Final localized hero images
-- White header bar
-- Black OBOK FOOD / SINCE 1952 text
-- Black navigation text
-- Removed duplicate hero click overlays
-- Preserved existing sections and video behavior
+Do not rename it.
+The English page already points to ../assets/obok-hero-en.png.
+After committing, wait 1-3 minutes and refresh with Ctrl+F5.
